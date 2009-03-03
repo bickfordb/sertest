@@ -1,0 +1,14 @@
+package passive_dns;
+
+message DnsRecord {
+  required string key = 1;
+  required string value = 2;
+  required string first = 3;
+  required string last = 4;
+  optional string type = 5 [default = "A"];
+  optional int32  ttl = 6 [default = 86400];
+}
+
+message DnsResponse {
+  repeated DnsRecord records = 1;
+}

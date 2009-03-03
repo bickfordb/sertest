@@ -54,14 +54,14 @@ def get_thrift():
 
 def thrift_to_bytes(var):
     transportOut = TTransport.TMemoryBuffer()
-    protocolOut = TBinaryProtocol.TBinaryProtocol(transportOut)
+    protocolOut = TBinaryProtocol.TBinaryProtocolAccelerated(transportOut)
     var.write(protocolOut)
     bytes = transportOut.getvalue()
     return bytes
 
 def thrift_from_bytes(bytes, clas):
     transportIn = TTransport.TMemoryBuffer(bytes)
-    protocolIn = TBinaryProtocol.TBinaryProtocol(transportIn)
+    protocolIn = TBinaryProtocol.TBinaryProtocolAccelerated(transportIn)
     
     n = clas()
     n.read(protocolIn)

@@ -1,0 +1,22 @@
+5000 total records (0.640s)
+
+get_thrift          (0.050s)
+get_pb              (0.460s)
+
+ser_thrift          (0.050s) 555049 bytes
+ser_pb              (2.120s) 415071 bytes
+ser_json            (0.020s) 718463 bytes
+ser_cjson           (0.030s) 718463 bytes
+ser_yaml            (10.320s) 623463 bytes
+
+ser_thrift_compressed (0.120s) 287674 bytes
+ser_pb_compressed     (2.130s) 284344 bytes
+ser_json_compressed   (0.070s) 292874 bytes
+ser_cjson_compressed  (0.080s) 292874 bytes
+ser_yaml_compressed   (10.340s) 291102 bytes
+
+serde_thrift        (0.080s)
+serde_pb            (3.750s)
+serde_json          (0.060s)
+serde_cjson         (0.070s)
+serde_yaml          (35.700s)

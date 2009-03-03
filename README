@@ -1,5 +1,6 @@
-These changes to the sertest benchmark shows that when you change TBinaryProtocol to TBinaryProtocolAccelerated, decoding thrift is
-just as a fast in test_speed.py as decoding JSON.
+DESCRIPTION
+
+These changes to the sertest benchmark show that when you change TBinaryProtocol to TBinaryProtocolAccelerated, decoding thrift is about as fast in test_speed.py as the cjson and simplejson libs decode JSON. 
 
 -- test_output.log --
 5000 total records (0.640s)
